@@ -1,0 +1,620 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="اختبار السمع والتواصل للأطفال من شهرين لسنتين - برنامج متابعة وليدك"><style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>متابعة وليدك</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F3F7F6; --surface:#FFFFFF; --surface-2:#E7F0EE; --ink:#15302E; --ink-2:#4B6461; --line:#D3E1DE;
+  --brand:#0D6B67; --brand-ink:#FFFFFF; --brand-soft:#D6ECE9;
+  --sun:#F0A04B; --sun-soft:#FDEBD6;
+  --skin:#F2C4A0; --skin-2:#E3A57E; --cheek:#F59C8E; --hair:#5A3A2A;
+  --ok:#23855A; --ok-soft:#DDF2E7; --watch:#B7780C; --watch-soft:#FBEFD3; --refer:#C0442D; --refer-soft:#F9E0D9; --urgent:#9E1C3A; --urgent-soft:#F7D9E0;
+  --t1:#CFE8F1; --t2:#FCE1CF; --t3:#E1E7FA; --t4:#DDF0DA; --t5:#F7DDEB; --t6:#FFF0C7;
+  --shadow:0 1px 2px rgba(13,60,56,.06),0 8px 24px rgba(13,60,56,.07);
+  --display:"Alexandria","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0E1A19; --surface:#152624; --surface-2:#1C3230; --ink:#E6F1EF; --ink-2:#A3BAB6; --line:#2A4441;
+  --brand:#4FC0B6; --brand-ink:#062422; --brand-soft:#173B38; --sun:#F4B26A; --sun-soft:#3A2A17;
+  --ok:#5FD19A; --ok-soft:#163427; --watch:#EDBA55; --watch-soft:#3A2E12; --refer:#F08A73; --refer-soft:#3D1F18; --urgent:#F27A98; --urgent-soft:#3D1522;
+  --t1:#1B3A45; --t2:#43301F; --t3:#262F4A; --t4:#223A24; --t5:#402637; --t6:#3F361A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1A19; --surface:#152624; --surface-2:#1C3230; --ink:#E6F1EF; --ink-2:#A3BAB6; --line:#2A4441;
+  --brand:#4FC0B6; --brand-ink:#062422; --brand-soft:#173B38; --sun:#F4B26A; --sun-soft:#3A2A17;
+  --ok:#5FD19A; --ok-soft:#163427; --watch:#EDBA55; --watch-soft:#3A2E12; --refer:#F08A73; --refer-soft:#3D1F18; --urgent:#F27A98; --urgent-soft:#3D1522;
+  --t1:#1B3A45; --t2:#43301F; --t3:#262F4A; --t4:#223A24; --t5:#402637; --t6:#3F361A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.75;direction:rtl}
+.wrap{max-width:780px;margin:0 auto;padding-inline:16px}
+h1,h2,h3{font-family:var(--display);line-height:1.35;text-wrap:balance;margin:0}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,label:focus-within{outline:3px solid var(--sun);outline-offset:2px}
+.small{font-size:14px;color:var(--ink-2)}
+
+/* header */
+.top{background:var(--brand);color:var(--brand-ink)}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}
+.mono{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--brand-ink);background:#fff;flex:none}
+.top .who{flex:1;min-width:180px;line-height:1.4}
+.top .who b{font-family:var(--display);font-size:18px;display:block}
+.top .who span{font-size:13.5px;opacity:.88}
+.phone{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 6px 4px 12px;font-size:14px}
+:root[data-theme="dark"] .phone{background:rgba(0,0,0,.12)}
+.phone a{color:inherit;font-weight:700;text-decoration:none;direction:ltr;unicode-bidi:isolate}
+.phone button{border:0;background:var(--brand-ink);color:var(--brand);border-radius:999px;padding:2px 10px;font-size:13px;font-weight:600}
+
+/* hero */
+.hero{padding-block:28px 8px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.eyebrow{font-size:13.5px;font-weight:600;color:var(--brand);letter-spacing:.02em}
+.hero h1{font-size:clamp(28px,6vw,40px);font-weight:800;margin-block:4px 10px}
+.hero p{color:var(--ink-2);max-width:48ch}
+.hero-art{width:150px;max-width:100%}
+.steps{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;padding:0;list-style:none}
+.steps li{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 6px;font-size:14px;font-weight:500}
+.steps b{width:24px;height:24px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:13px}
+@media (max-width:540px){.hero{grid-template-columns:1fr}.hero-art{display:none}}
+
+/* sections */
+section{margin-block:22px}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.sec-h h2{font-size:22px}
+.linkbtn{background:none;border:0;color:var(--brand);font-weight:600;padding:0;text-decoration:underline;text-underline-offset:3px;font-size:15px}
+
+/* age grid */
+.ages{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:600px){.ages{grid-template-columns:repeat(2,1fr)}}
+.age{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:12px 12px 14px;text-align:center;display:grid;gap:4px;justify-items:center;transition:transform .15s,border-color .15s;box-shadow:var(--shadow)}
+.age:hover{transform:translateY(-2px);border-color:var(--brand)}
+.age.suggested{border-color:var(--sun);box-shadow:0 0 0 3px var(--sun-soft),var(--shadow)}
+.age svg{width:96px;height:96px}
+.age b{font-family:var(--display);font-size:19px}
+.age span{font-size:13.5px;color:var(--ink-2);line-height:1.4}
+.age em{font-style:normal;font-size:12px;font-weight:700;color:var(--watch);background:var(--sun-soft);padding:1px 8px;border-radius:999px}
+
+/* calc */
+.calc{background:var(--surface-2);border-radius:18px;padding:16px;display:grid;gap:12px}
+.calc .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:540px){.calc .row{grid-template-columns:1fr}}
+.calc label{display:grid;gap:4px;font-size:14.5px;font-weight:600}
+.calc input,.calc select{font:inherit;font-weight:500;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;width:100%}
+.calc-out{background:var(--surface);border-radius:14px;padding:12px 14px;font-size:15.5px;line-height:1.7}
+.calc-out strong{color:var(--brand)}
+
+.note{border-inline-start:4px solid var(--watch);background:var(--watch-soft);border-radius:12px;padding:10px 14px;font-size:15px}
+.note.red{border-color:var(--urgent);background:var(--urgent-soft)}
+
+/* quiz */
+.quiz-head{display:flex;align-items:center;gap:12px;padding-top:18px}
+.quiz-head svg{width:58px;height:58px;flex:none}
+.quiz-head h2{font-size:20px}
+.back{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600}
+.bar{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin-top:14px}
+.bar i{display:block;height:100%;background:var(--brand);border-radius:99px;transition:width .3s}
+.count{font-size:13.5px;color:var(--ink-2);margin-top:6px;font-variant-numeric:tabular-nums}
+.qcard{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);margin-top:12px;overflow:hidden}
+.qart{display:grid;place-items:center;padding:18px 0 6px;position:relative}
+.qart .blob{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;color:var(--brand)}
+.qart .blob svg{width:78px;height:78px}
+.qtag{position:absolute;top:12px;inset-inline-start:14px;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+.qbody{padding:6px 20px 20px;display:grid;gap:12px}
+.qbody h3{font-size:clamp(20px,4.6vw,24px);font-weight:700;text-align:center}
+.how{background:var(--sun-soft);border-radius:14px;padding:10px 14px;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.how svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--watch)}
+.answers{display:grid;gap:10px}
+.ans{display:flex;align-items:center;gap:12px;width:100%;text-align:start;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:12px 14px;font-weight:600;font-size:16.5px;transition:border-color .15s,background .15s}
+.ans:hover{border-color:var(--brand)}
+.ans .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;font-weight:800;font-size:15px}
+.ans.y .dot{background:var(--ok-soft);color:var(--ok)}
+.ans.n .dot{background:var(--refer-soft);color:var(--refer)}
+.ans.u .dot{background:var(--surface-2);color:var(--ink-2)}
+.ans.sel{border-color:var(--brand);background:var(--brand-soft)}
+.checks{display:grid;gap:8px}
+.chk{display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:14px;padding:10px 12px;font-weight:500;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--brand);flex:none}
+.chk:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+.primary{background:var(--brand);color:var(--brand-ink);border:0;border-radius:14px;padding:12px 18px;font-weight:700;font-size:16.5px;font-family:var(--display)}
+.primary:disabled{opacity:.45;cursor:not-allowed}
+.ghost{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:11px 16px;font-weight:600}
+
+/* result */
+.res-hero{border-radius:22px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin-top:18px}
+.res-hero .ic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--surface);font-family:var(--display);font-weight:800;font-size:30px}
+.res-hero h2{font-size:clamp(21px,5vw,27px)}
+.res-hero p{font-size:15.5px;margin-top:4px}
+.t-ok{background:var(--ok-soft)} .t-ok .ic,.t-ok h2{color:var(--ok)}
+.t-watch{background:var(--watch-soft)} .t-watch .ic,.t-watch h2{color:var(--watch)}
+.t-refer{background:var(--refer-soft)} .t-refer .ic,.t-refer h2{color:var(--refer)}
+.t-urgent{background:var(--urgent-soft)} .t-urgent .ic,.t-urgent h2{color:var(--urgent)}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;padding:1px 10px;border-radius:999px;background:var(--surface);margin-bottom:4px}
+.block{background:var(--surface);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);margin-top:14px}
+.block h3{font-size:17.5px;margin-bottom:8px}
+.block ul{margin:0;padding-inline-start:20px;display:grid;gap:4px}
+.skill{display:grid;grid-template-columns:44px 1fr;gap:12px;padding-block:10px;border-top:1px solid var(--line)}
+.skill:first-of-type{border-top:0}
+.skill .si{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--brand)}
+.skill .si svg{width:28px;height:28px}
+.skill b{display:block;font-weight:600;line-height:1.5}
+.skill small{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;margin-inline-start:6px;vertical-align:1px}
+.skill small.n{background:var(--refer-soft);color:var(--refer)} .skill small.u{background:var(--surface-2);color:var(--ink-2)}
+.skill p{font-size:14.5px;color:var(--ink-2);margin-top:2px}
+.hear{border-inline-start:4px solid var(--brand)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.copybox{width:100%;min-height:120px;font:inherit;font-size:14px;border:1.5px solid var(--line);border-radius:12px;padding:10px;background:var(--surface-2);color:var(--ink);margin-top:8px}
+.toast{font-size:14px;color:var(--ok);font-weight:600}
+
+/* flags + footer */
+.flags{background:var(--urgent-soft);border-radius:18px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.flags .ic{width:36px;height:36px;border-radius:50%;background:var(--urgent);color:#fff;display:grid;place-items:center;font-weight:800;font-family:var(--display)}
+.flags b{color:var(--urgent)}
+details.src{margin-top:10px;font-size:14px;color:var(--ink-2)}
+details.src summary{cursor:pointer;font-weight:600}
+footer{margin-top:28px;border-top:1px solid var(--line);padding-block:18px 28px;font-size:14px;color:var(--ink-2);text-align:center}
+footer b{color:var(--ink);font-family:var(--display)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+</head><body>
+
+<header class="top">
+  <div class="wrap">
+    <img class="mono" src="data:image/jpeg;base64,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" alt="أ.د/ محمد رضا بسيوني" width="46" height="46">
+    <div class="who"><b>برنامج متابعة وليدك</b><span>أ.د/ محمد رضا بسيوني · أستاذ طب الأطفال وحديثي الولادة</span></div>
+    <div class="phone"><span>للتواصل:</span><a href="tel:01022771707">01022771707</a><button type="button" data-copy="01022771707">انسخ</button></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- HOME -->
+<div id="home">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">دليل السمع والتواصل للأب والأم</div>
+      <h1>طفلك بيسمع ويتواصل كويس؟</h1>
+      <p>اختبار سريع من ٥ دقايق، بيسألك عن حاجات بتشوفها بنفسك في البيت، وفي الآخر يقولك الخطوة الجاية: تكمّل زي ما إنت، ولا تراقب شوية، ولا تكلّمنا.</p>
+      <ol class="steps">
+        <li><b>١</b>اختار سن طفلك</li>
+        <li><b>٢</b>جاوب على اللي شايفه</li>
+        <li><b>٣</b>اعرف تعمل إيه</li>
+      </ol>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+  </div>
+
+  <section aria-labelledby="calcH">
+    <div class="sec-h"><h2 id="calcH">مش متأكد تختار أنهي سن؟</h2></div>
+    <div class="calc">
+      <div class="row">
+        <label for="dob">تاريخ الميلاد<input id="dob" type="date"></label>
+        <label for="ga">اتولد في الأسبوع كام من الحمل؟
+          <select id="ga"></select>
+        </label>
+      </div>
+      <div class="calc-out" id="calcOut" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ageH">
+    <div class="sec-h"><h2 id="ageH">اختار سن طفلك</h2><button class="linkbtn" type="button" id="whatCorrected">يعني إيه العمر المُصحّح؟</button></div>
+    <div class="note" id="correctedNote" hidden style="margin-bottom:12px">لو الطفل اتولد قبل الأسبوع ٣٧، بنطرح الأسابيع اللي اتولدها بدري من عمره. مثال: طفل عمره ٨ شهور واتولد في الأسبوع ٣٢ (يعني بدري ٨ أسابيع = شهرين تقريبًا) ← عمره المُصحّح ٦ شهور، فنختار اختبار ٦ شهور. استخدموا العمر المُصحّح لحد سنتين، إلا لو دكتور المتابعة قال غير كده.</div>
+    <div class="ages" id="ages"></div>
+  </section>
+
+  <section>
+    <div class="flags" role="note">
+      <div class="ic">!</div>
+      <div><b>متستنوش الاختبار في الحالات دي — كلّموا الدكتور على طول:</b> لو الطفل بطّل يعمل حاجة كان بيعملها (كلمة، صوت، ابتسامة، إشارة)، أو فجأة بقى مش بيستجيب للصوت خالص. <b>وروحوا الطوارئ فورًا</b> لو عنده تشنجات، أو ازرقاق، أو صعوبة في التنفس.</div>
+    </div>
+    <p class="small" style="margin-top:10px">الاختبار ده للاسترشاد، ومش بديل عن كشف الدكتور أو التقييم المتخصص. الإجابات بتفضل على جهازك ومش بتتبعت لأي حد.</p>
+  </section>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" hidden>
+  <div class="quiz-head">
+    <div id="qAvatar" aria-hidden="true"></div>
+    <div style="flex:1"><div class="eyebrow" id="qAge"></div><h2 id="qTitle"></h2></div>
+    <button class="back" type="button" id="qBack">‹ رجوع</button>
+  </div>
+  <div class="bar" aria-hidden="true"><i id="qBar"></i></div>
+  <div class="count" id="qCount" aria-live="polite"></div>
+  <div class="qcard fade" id="qCard"></div>
+</div>
+
+<!-- RESULT -->
+<div id="result" hidden></div>
+
+<footer>
+  <img class="mono" src="data:image/jpeg;base64,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" alt="" width="64" height="64" style="width:64px;height:64px;margin:0 auto 6px;display:block;border-color:var(--line)">
+  <b>برنامج متابعة وليدك</b><br>
+  أ.د/ محمد رضا بسيوني — أستاذ طب الأطفال وحديثي الولادة<br>
+  <span style="direction:ltr;unicode-bidi:isolate">01022771707</span>
+  <details class="src"><summary>الأسئلة دي معمولة على أساس إيه؟</summary>
+    <p style="margin-top:6px">علامات النمو للمراكز الأمريكية لمكافحة الأمراض والأكاديمية الأمريكية لطب الأطفال (تحديث ٢٠٢٢)، وتوصيات اللجنة المشتركة لسمع الأطفال (JCIH 2019) لفحص السمع ومتابعة عوامل الخطورة، ونماذج البرنامج الأصلية. كل سؤال بيقيس مهارة بيعملها أغلب الأطفال (حوالي ٧٥٪ أو أكتر) في السن ده.</p>
+  </details>
+</footer>
+</main>
+
+<script>
+(function(){
+const AR = n => Number(n).toLocaleString('ar-EG');
+const PHONE = '01022771707';
+
+/* ---------- illustrations ---------- */
+const ICONS = {
+  ear:'<path d="M22 40c0-12 3-26 16-26 9 0 14 7 14 14 0 9-9 10-9 18 0 5-4 9-9 9-4 0-7-3-7-7"/><path d="M32 31c0-4 3-7 6-7s6 3 6 6c0 4-4 4-4 8"/><path d="M8 26c-2 4-2 9 0 13" opacity=".55"/><path d="M13 29c-1 2-1 5 0 7" opacity=".55"/>',
+  smile:'<circle cx="32" cy="32" r="21"/><circle cx="24.5" cy="27" r="1.6" fill="currentColor"/><circle cx="39.5" cy="27" r="1.6" fill="currentColor"/><path d="M22 36c5 7 15 7 20 0"/>',
+  sound:'<path d="M12 18h30a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6H26l-9 8v-8h-5a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z"/><path d="M18 30c2-3 3-3 5 0s3 3 5 0 3-3 5 0 3 3 5 0"/><path d="M54 22c3 4 3 12 0 16" opacity=".55"/>',
+  name:'<circle cx="40" cy="24" r="9"/><path d="M26 52c0-9 6-15 14-15s14 6 14 15"/><path d="M8 20l6 3M6 30h7M8 40l6-3"/>',
+  gesture:'<path d="M22 34V16a3 3 0 0 1 6 0v14M28 30V12a3 3 0 0 1 6 0v18M34 30V14a3 3 0 0 1 6 0v18M40 32v-12a3 3 0 0 1 6 0v18c0 10-7 16-15 16-6 0-10-3-13-8l-6-10a3 3 0 0 1 5-3l5 5"/><path d="M50 10c3 2 5 5 5 9" opacity=".55"/><path d="M12 12c-2 2-4 5-4 9" opacity=".55"/>',
+  point:'<path d="M14 36h20a4 4 0 0 0 0-8h-4"/><path d="M28 28h20a4 4 0 0 0 0-8H24"/><path d="M26 20l-4-4c-2-2-5 0-4 3l2 4c-4 2-7 7-7 13 0 8 6 14 14 14h8a4 4 0 0 0 0-8h-2"/><path d="M34 44a4 4 0 0 0 0-8h-4" /><circle cx="56" cy="24" r="2" fill="currentColor" opacity=".55"/>',
+  words:'<path d="M10 14h44a5 5 0 0 1 5 5v18a5 5 0 0 1-5 5H30l-10 9v-9H10a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5z"/><text x="32" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor" stroke="none" font-family="Alexandria,sans-serif">ماما</text>',
+  understand:'<path d="M32 8a16 16 0 0 0-9 29c2 2 3 4 3 7h12c0-3 1-5 3-7a16 16 0 0 0-9-29z"/><path d="M26 50h12M28 56h8"/><path d="M28 26c1-3 3-4 5-4" opacity=".55"/>',
+  play:'<rect x="10" y="34" width="18" height="18" rx="3"/><rect x="34" y="34" width="18" height="18" rx="3"/><rect x="22" y="12" width="18" height="18" rx="3"/><path d="M17 43h4M43 40v6M31 18v6"/>',
+  book:'<path d="M32 18c-6-5-15-6-24-4v34c9-2 18-1 24 4 6-5 15-6 24-4V14c-9-2-18-1-24 4z"/><path d="M32 18v34"/><circle cx="20" cy="30" r="4" opacity=".55"/><path d="M40 28h9M40 34h9" opacity=".55"/>',
+  eyes:'<path d="M5 32s10-16 27-16 27 16 27 16-10 16-27 16S5 32 5 32z"/><circle cx="32" cy="32" r="8"/><circle cx="34" cy="30" r="2.5" fill="currentColor"/>',
+  bulb:'<circle cx="32" cy="32" r="22"/><path d="M32 22v14M32 42v1"/>'
+};
+const TINT = {ear:'--t1',smile:'--t2',sound:'--t3',name:'--t5',gesture:'--t4',point:'--t6',words:'--t3',understand:'--t6',play:'--t4',book:'--t2',eyes:'--t1'};
+const icon = (k,cls='') => `<svg class="${cls}" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k]}</svg>`;
+
+function baby(age){
+  const onesie = {2:'#9BD3CF',6:'#F6B98A',9:'#B8C4F0',12:'#A9D9A0',18:'#F2A7C3',24:'#F7D27A'}[age];
+  const bg = {2:'--t1',6:'--t2',9:'--t3',12:'--t4',18:'--t5',24:'--t6'}[age];
+  const hair = age<6 ? '<path d="M56 27c2-4 7-4 8 0" stroke="var(--hair)" stroke-width="3" fill="none" stroke-linecap="round"/>'
+    : age<12 ? '<path d="M44 34c2-10 10-14 16-14s14 4 16 14c-5-4-10-6-16-6s-11 2-16 6z" fill="var(--hair)"/>'
+    : '<path d="M34 50c-2-18 10-28 26-28s28 10 26 28c-3-8-6-11-9-12-6 3-16 4-26 1-4 2-8 5-11 11z" fill="var(--hair)"/>';
+  const eyes = age===2 ? '<path d="M49 52q3 3 6 0M65 52q3 3 6 0" stroke="#3B2A22" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
+    : '<circle cx="52" cy="52" r="3" fill="#2B1E18"/><circle cx="68" cy="52" r="3" fill="#2B1E18"/><circle cx="53" cy="51" r="1" fill="#fff"/><circle cx="69" cy="51" r="1" fill="#fff"/>';
+  const mouth = age===24 ? '<ellipse cx="60" cy="63" rx="4.5" ry="3.6" fill="#9E3B36"/>' : '<path d="M54 61q6 6 12 0" stroke="#9E3B36" stroke-width="2.6" fill="none" stroke-linecap="round"/>';
+  let arms='', extra='';
+  const A=(x1,y1,x2,y2)=>`<path d="M${x1} ${y1}L${x2} ${y2}" stroke="var(--skin)" stroke-width="10" stroke-linecap="round"/>`;
+  if(age===2){ arms=''; extra='<path d="M92 44c4 5 4 13 0 18M99 39c6 8 6 20 0 28" stroke="var(--brand)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>'; }
+  if(age===6){ arms=A(40,88,30,76)+A(80,88,90,76); extra='<circle cx="94" cy="66" r="8" fill="var(--sun)"/><path d="M90 74l-4 10" stroke="var(--sun)" stroke-width="4" stroke-linecap="round"/><circle cx="94" cy="66" r="3" fill="#fff" opacity=".7"/>'; }
+  if(age===9){ arms=A(40,86,26,62)+A(80,86,94,62); }
+  if(age===12){ arms=A(40,88,34,100)+A(80,86,94,64); extra='<path d="M100 54c3 2 4 5 4 8M104 48c5 3 7 8 7 13" stroke="var(--brand)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>'; }
+  if(age===18){ arms=A(40,88,34,100)+A(80,86,100,72); extra='<path d="M100 36l5 3 6-2-3 5 3 5-6-2-5 3 1-6z" fill="var(--sun)"/>'; }
+  if(age===24){ arms=A(40,88,34,100)+A(80,88,86,100); extra='<path d="M76 14h36a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H92l-7 6v-6h-9a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z" fill="var(--surface)" stroke="var(--brand)" stroke-width="2"/><text x="94" y="29.5" text-anchor="middle" font-size="10" font-weight="700" fill="var(--brand)" font-family="Alexandria,sans-serif">عايز كورة</text>'; }
+  const body = age===2
+    ? `<path d="M30 110c0-22 12-34 30-34s30 12 30 34z" fill="${onesie}"/><path d="M36 92c10 6 38 6 48 0" stroke="#fff" stroke-width="2" opacity=".6" fill="none"/>`
+    : `<path d="M36 112c0-20 10-30 24-30s24 10 24 30z" fill="${onesie}"/>`;
+  return `<svg viewBox="0 0 120 120" role="img" aria-label="رسم لطفل عمره ${FORMS[age].label}">
+    <circle cx="60" cy="60" r="58" fill="var(${bg})"/>
+    <clipPath id="c${age}"><circle cx="60" cy="60" r="58"/></clipPath>
+    <g clip-path="url(#c${age})">${body}${arms}</g>
+    <circle cx="35" cy="56" r="6" fill="var(--skin-2)"/><circle cx="85" cy="56" r="6" fill="var(--skin-2)"/>
+    <circle cx="60" cy="54" r="25" fill="var(--skin)"/>
+    ${hair}${eyes}
+    <circle cx="46" cy="60" r="4" fill="var(--cheek)" opacity=".45"/><circle cx="74" cy="60" r="4" fill="var(--cheek)" opacity=".45"/>
+    ${mouth}${extra}
+  </svg>`;
+}
+
+/* ---------- content ---------- */
+// key:true = مهارة أساسية؛ غيابها لوحده سبب كافي للتقييم
+const FORMS = {
+ 2:{label:'شهرين',sub:'فحص السمع وأول ابتسامة',title:'السمع والتواصل عند شهرين',qs:[
+  {id:'screen',ic:'ear',key:true,t:'طفلك اتعمل له فحص سمع بعد الولادة؟ ونتيجته كانت إيه؟',
+   how:'النتيجة بتكون مكتوبة في ورقة المستشفى أو كارت المتابعة. «Pass» يعني سليم، و«Refer» يعني محتاج إعادة.',
+   opts:[{v:'yes',l:'اتعمل، والنتيجة سليمة في الودنين'},{v:'no',l:'اتعمل، بس قالوا نعيده أو ودن مش سليمة',f:'refer'},{v:'no',l:'لسه ما اتعملش',f:'none'},{v:'unsure',l:'مش فاكر/ة النتيجة'}]},
+  {id:'startle',ic:'ear',key:true,t:'بيتخض أو يرمش أو يصحى لما يسمع صوت عالي مفاجئ؟',how:'صقفة جامدة أو باب بيتقفل وهو صاحي، من غير ما يشوف الحركة.'},
+  {id:'calm',ic:'ear',t:'بيهدى أو يبطّل عياط لما يسمع صوتك؟',how:'كلّميه بهدوء وهو بيعيط من غير ما تشيليه، واستني ثواني.'},
+  {id:'face',ic:'eyes',t:'بيبص في وشّك لما تكلّمه؟',how:'قرّب وشّك منه حوالي ٢٠ لـ٣٠ سم، ده أوضح مسافة بيشوف فيها.'},
+  {id:'smile',ic:'smile',t:'بيبتسم لما تكلّمه أو تضحك له؟',how:'الابتسامة دي غير ابتسامة النوم؛ بتيجي وهو صاحي وبيبص لك.'},
+  {id:'coo',ic:'sound',t:'بيطلّع أصوات غير العياط، زي «آآ» و«أووه»؟',how:'غالبًا بتسمعها وهو مبسوط وشبعان وبيبص حواليه.'}
+ ]},
+ 6:{label:'٦ شهور',sub:'بيلتفت للصوت وبيرد بأصوات',title:'السمع والتواصل عند ٦ شهور',qs:[
+  {id:'turn',ic:'ear',key:true,t:'بيلفّ راسه ناحية الصوت، زي صوتك من جنبه أو من وراه؟',how:'كلّمه بصوت هادي من جنبه وهو مش شايفك، وجرّب من الناحيتين.'},
+  {id:'startle6',ic:'ear',t:'بيتخض أو يرمش لما يسمع صوت عالي مفاجئ؟',how:'زي باب بيتقفل أو حاجة وقعت على الأرض.'},
+  {id:'turns',ic:'sound',key:true,t:'لما تكلّمه، بيرد عليك بأصوات كأنكم بتتكلموا بالدور؟',how:'قول «آآه» واسكت، واستنى يرد بصوت. ولما يسكت رد عليه تاني.'},
+  {id:'laugh',ic:'smile',t:'بيضحك بصوت عالي، مش بس بيبتسم؟',how:'جرّب تزغزغه أو تلعب معاه بوشّك.'},
+  {id:'lips',ic:'sound',t:'بيعمل أصوات بشفايفه، زي «بببب» أو ينفخ ويطلّع توت؟',how:'بيعملها كتير وهو بيلعب لوحده أو وهو بيقلدك.'},
+  {id:'watch',ic:'eyes',t:'بيبص في وشّك ويتابعك وإنت بتتكلم؟',how:'لاحظ هل عينه بتروح لبُقّك ووشّك وإنت بتكلّمه.'},
+  {id:'cry',ic:'sound',t:'عياطه بيختلف حسب هو عايز إيه: جعان، تعبان، زهقان؟',how:'الأم غالبًا بتعرف تفرّق من نوع العياط.'},
+  {id:'tone',ic:'ear',t:'بيتأثر بنبرة صوتك؛ يفرح لما تكلّمه بحنية ويتضايق لو صوتك عالي؟',how:'غيّر نبرة صوتك وشوف تعبير وشّه.'}
+ ]},
+ 9:{label:'٩ شهور',sub:'بيرد على اسمه وبيبابي',title:'السمع والتواصل عند ٩ شهور',qs:[
+  {id:'name9',ic:'name',key:true,t:'بيلتفت أو يبص لك لما تنادي اسمه؟',how:'ناديه باسمه من غير ما يشوفك وهو مشغول بلعبة. جرّب مرتين أو تلاتة في اليوم.'},
+  {id:'babble',ic:'sound',key:true,t:'بيكرر مقاطع زي «بابابا» و«مامامام» و«دادادا»؟',how:'مش لازم يقصد بيها حد معين في السن ده.'},
+  {id:'arms',ic:'gesture',t:'بيرفع إيديه عشان تشيله؟',how:'مد إيدك له من غير كلام وشوف بيرد إزاي.'},
+  {id:'peek',ic:'play',t:'بيلعب معاك «استخبى… بخ!» ويضحك؟',how:'غطي وشّك بإيدك أو بمنديل واكشفه وقول «بخ».'},
+  {id:'bell',ic:'ear',t:'بيلتفت لصوت جرس الباب أو التليفون؟',how:'لاحظ رد فعله أول ما الجرس يرن.'},
+  {id:'no9',ic:'understand',t:'بيفهم «لأ»؛ يقف لحظة لما تقولها؟',how:'قولها بنبرة واضحة لما يمد إيده على حاجة.'},
+  {id:'social9',ic:'smile',t:'بيحب يكون قريب من الناس وبيتفاعل معاهم؟',how:'بيبتسم ويبص للناس اللي يعرفهم، وممكن يتكسف من الغُرب، ودا طبيعي.'},
+  {id:'follow9',ic:'eyes',t:'بيبص على الحاجة اللي إنت بتبص عليها أو بتكلّمه عنها؟',how:'بُص على لعبة وقول «شوف الكورة!» وشوف عينه راحت فين.'}
+ ]},
+ 12:{label:'سنة',sub:'باي باي وأول كلمة',title:'السمع والتواصل عند سنة',qs:[
+  {id:'bye',ic:'gesture',key:true,t:'بيعمل «باي باي» بإيده؟',how:'ممكن يعملها بعد ما تعملها قدامه؛ دا يتحسب.'},
+  {id:'first',ic:'words',key:true,t:'بيقول «ماما» أو «بابا» لحد معين، أو كلمة واحدة على الأقل ليها معنى؟',how:'الكلمة ممكن تكون ناقصة، زي «مم» للأكل، طالما بيستخدمها لنفس الحاجة كل مرة.'},
+  {id:'point12',ic:'point',key:true,t:'بيشاور بصباعه أو إيده على حاجة عايزها؟',how:'حط لعبة يحبها في مكان عالي يشوفه وما يطولوش.'},
+  {id:'look12',ic:'eyes',t:'لما تشاور على لعبة بعيدة، بيبص ناحيتها؟',how:'شاور وقول «شوف!» وشوف هل بيبص على صباعك ولا على اللعبة.'},
+  {id:'cmd12',ic:'understand',t:'بينفّذ طلب بسيط وإنت بتشاور، زي «هات الكورة»؟',how:'اطلب وإنت بتشاور على الحاجة ومادد إيدك.'},
+  {id:'eye12',ic:'eyes',t:'بيبص لك في عينك وهو بيطلب حاجة بصوت أو إشارة؟',how:'لاحظ لما يكون عايز حاجة: بيبص لك وللحاجة؟'},
+  {id:'show12',ic:'play',t:'بيجيب لك لعبة عشان يوريهالك؟',how:'مش عشان تصلّحها، لكن عشان يشاركك الفرحة بيها.'},
+  {id:'jargon',ic:'sound',t:'بيطلّع كلام «مخربط» بنغمة كأنه بيحكي؟',how:'أصوات كتير ورا بعض بنغمة سؤال أو حكاية.'},
+  {id:'book12',ic:'book',t:'بيحب يتفرج على كتب الصور معاك؟',how:'اقعد جنبه بكتاب صور تقيل الصفحات.'}
+ ]},
+ 18:{label:'سنة ونص',sub:'كلمات وإشارة للمشاركة',title:'السمع والتواصل عند سنة ونص',qs:[
+  {id:'words18',ic:'words',key:true,t:'بيقول ٣ كلمات على الأقل غير «ماما» و«بابا»؟',how:'الكلمة الناقصة تتحسب، زي «كو» للكورة أو «مي» للمية، طالما بيستخدمها كل مرة لنفس الحاجة.'},
+  {id:'show18',ic:'point',key:true,t:'بيشاور على حاجة عشان يوريهالك (زي طيارة في السما)، مش بس عشان عايزها؟',how:'دي بتسمى «إشارة المشاركة»؛ بيشاور ويبص لك عشان تشوف معاه.'},
+  {id:'name18',ic:'name',key:true,t:'بيرد لما تنادي اسمه؟',how:'ناديه وهو بيلعب ومش شايفك.'},
+  {id:'cmd18',ic:'understand',t:'بينفّذ طلب بسيط من غير ما تشاور، زي «هات الشبشب»؟',how:'اطلب بالكلام بس، من غير ما تبص أو تشاور على الحاجة.'},
+  {id:'pic18',ic:'book',t:'لما تسأله «فين القطة؟» في كتاب، بيشاور عليها؟',how:'اختار صور حاجات يعرفها: قطة، عربية، كورة.'},
+  {id:'body18',ic:'understand',t:'بيشاور على جزء واحد على الأقل من جسمه لما تسأله، زي «عينك فين؟»؟',how:'اسأله وإنت مش بتشاور على نفسك.'},
+  {id:'imit18',ic:'play',t:'بيقلّدك وإنت بتعمل حاجات في البيت، زي الكنس أو الكلام في التليفون؟',how:'لاحظ لعبه لوحده؛ بيعمل اللي شافك بتعمله؟'},
+  {id:'read18',ic:'book',t:'بيستمتع لما تقرا له أو تحكي له من كتاب؟',how:'بيقعد معاك دقايق وبيقلب الصفحات أو يشاور.'}
+ ]},
+ 24:{label:'سنتين',sub:'بيجمع كلمتين مع بعض',title:'السمع والتواصل عند سنتين',qs:[
+  {id:'two',ic:'words',key:true,t:'بيقول كلمتين مع بعض، زي «عايز مية» أو «بابا راح»؟',how:'لازم يكونوا من عنده، مش تقليد لجملة قلتها حالًا.'},
+  {id:'fifty',ic:'words',t:'بيقول حوالي ٥٠ كلمة أو أكتر؟',how:'اكتبوا الكلمات اللي بيقولها في ورقة على مدار يومين. الكلمة الناقصة تتحسب.'},
+  {id:'name24',ic:'name',key:true,t:'بيرد لما تنادي اسمه وبيبص لك؟',how:'ناديه وهو بيلعب ومش شايفك.'},
+  {id:'step2',ic:'understand',t:'بينفّذ طلب من خطوتين، زي «هات العربية وحطها على الترابيزة»؟',how:'قول الطلب مرة واحدة من غير ما تشاور.'},
+  {id:'body24',ic:'understand',t:'بيشاور على جزئين على الأقل من جسمه لما تسأله؟',how:'«فين عينك؟ فين مناخيرك؟»'},
+  {id:'pic24',ic:'book',t:'بيشاور على الصور في الكتاب لما تسمّيها؟',how:'«فين الكلب؟ فين العربية؟»'},
+  {id:'pretend',ic:'play',t:'بيلعب لعب تخيّلي، زي إنه يأكّل العروسة أو يكلّم في تليفون لعبة؟',how:'لاحظه وهو بيلعب لوحده أو معاك.'},
+  {id:'gest24',ic:'gesture',t:'بيستخدم إشارات غير «باي باي»، زي إنه يهز راسه «أيوه» أو يبعت بوسة؟',how:'بيستخدم إيده وراسه عشان يوصّل كلامه.'},
+  {id:'empathy',ic:'smile',t:'بياخد باله لما حد يزعل أو يتعوّر، ويبص له أو يقرّب منه؟',how:'لاحظ رد فعله لما أخوه أو حد قريب يعيط.'},
+  {id:'clear',ic:'sound',t:'الناس في البيت بيفهموا نص كلامه تقريبًا؟',how:'الغُرب ممكن ما يفهموش كتير في السن ده، ودا طبيعي.'}
+ ]}
+};
+
+const EXTRA = [
+  {id:'regress',type:'ynu',ic:'bulb',t:'هل طفلك بطّل يعمل حاجة كان بيعملها قبل كده، زي كلمة أو صوت أو ابتسامة أو إشارة؟',how:'نقصد مهارة كانت موجودة واختفت، مش مهارة لسه ما جتش.',
+   opts:[{v:'no',l:'لأ، ما بطّلش حاجة'},{v:'yes',l:'أيوه، بطّل حاجة كان بيعملها'},{v:'unsure',l:'مش متأكد/ة'}]},
+  {id:'worry',type:'ynu',ic:'ear',t:'هل إنت أو حد من العيلة قلقان على سمع الطفل أو كلامه؟',how:'إحساس الأهل مهم جدًا، حتى لو كل الإجابات اللي فاتت كانت «أيوه».',
+   opts:[{v:'no',l:'لأ، مش قلقانين'},{v:'yes',l:'أيوه، في قلق'},{v:'unsure',l:'شوية'}]},
+  {id:'risk',type:'multi',ic:'ear',t:'حصل أي حاجة من دول؟ اختار كل اللي ينطبق',how:'الحاجات دي بتخلّي الطفل محتاج متابعة سمع حتى لو فحص السمع الأول كان سليم.',
+   items:[['nicu','دخل الحضّانة (العناية المركزة) أكتر من ٥ أيام'],['fam','حد في العيلة عنده ضعف سمع من وهو صغير'],['bili','صفرا شديدة احتاجت تغيير دم'],['mening','التهاب سحائي أو عدوى شديدة'],['ears','التهابات أو مية ورا الودن بتتكرر'],['syn','عيب خلقي في الوش أو الودن، أو متلازمة معروفة']]}
+];
+
+const TIPS = {
+  ear:'كلّمه من جنبه بصوت هادي واستنى يلتفت. قلّلوا صوت التلفزيون وقت اللعب عشان صوتكم يبان.',
+  smile:'خلّي وشّك قريب منه واضحك وكلّمه بحماس، واستنى رده. الطفل بيتعلم التواصل من وشّك.',
+  sound:'قلّد أصواته وردّ عليها كأنكم بتتكلموا بالدور، وسيب له فرصة يرد قبل ما تتكلم تاني.',
+  name:'ناديه باسمه قبل ما تكلّمه، ولما يبص لك اضحك وامدحه. بلاش تكرر اسمه كتير من غير سبب.',
+  gesture:'اعمل الإشارة وإنت بتقول الكلمة (باي باي، هات، شيلني) وكرّرها في المواقف اليومية.',
+  point:'شاور على الحاجات وسمّيها. ولما يمد إيده ناحية حاجة، قول اسمها وشاور عليها قبل ما تديهاله.',
+  words:'سمّي الحاجات اللي حواليه بكلمات قصيرة، وكرّر كلامه وزوّد عليه كلمة: «كورة» ← «كورة حمرا».',
+  understand:'اطلب منه طلبات بسيطة في مواقف يومية. ساعده بالإشارة الأول، وبعدين قلّلها تدريجيًا.',
+  play:'اقعد معاه على الأرض بألعاب بسيطة، قلّد لعبه وخلّيه يقلّدك، وخلّوا اللعب بالدور.',
+  book:'اقعدوا ١٠ دقايق كل يوم مع كتاب صور. شاور على الصور وسمّيها، واسأله «فين…؟».',
+  eyes:'انزل لمستوى عينه وإنت بتكلّمه، وشاور على الحاجة وبص عليها معاه.',
+  bulb:''
+};
+
+/* ---------- logic (pure, testable) ---------- */
+function evaluate(age, ans, extra){
+  const qs = FORMS[age].qs;
+  const items = qs.map((q,i)=>({q, a:ans[i]}));
+  const noItems = items.filter(x=>x.a && x.a.v==='no');
+  const unsureItems = items.filter(x=>x.a && x.a.v==='unsure');
+  const keyNo = noItems.filter(x=>x.q.key);
+  const regress = extra.regress, worry = extra.worry;
+  const risks = (extra.risk||[]).filter(r=>r!=='none');
+  const screen = age===2 ? ans[0] : null;
+  const screenProblem = screen && screen.v==='no';
+  let tier;
+  if(regress==='yes') tier='urgent';
+  else if(keyNo.length || noItems.length>=2 || (worry==='yes' && noItems.length>=1)) tier='refer';
+  else if(noItems.length===1 || unsureItems.length || worry==='yes' || worry==='unsure' || regress==='unsure') tier='watch';
+  else tier='ok';
+  const hearing = screenProblem ? (screen.f==='none'?'none':'refer') : (screen && screen.v==='unsure') ? 'unsure' : risks.length ? 'risk' : null;
+  return {tier, noItems, unsureItems, keyNo, hearing, risks, worry, regress};
+}
+window.evaluateCheck = evaluate; window.FORMS = FORMS;
+
+/* ---------- state + render ---------- */
+const $ = id => document.getElementById(id);
+let S = {age:null, i:0, ans:[], extra:{}};
+const steps = () => FORMS[S.age].qs.length + EXTRA.length;
+
+function show(view){
+  ['home','quiz','result'].forEach(v=>$(v).hidden = v!==view);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderAges(suggest){
+  $('ages').innerHTML = Object.keys(FORMS).map(k=>{
+    const f=FORMS[k];
+    return `<button type="button" class="age${+k===suggest?' suggested':''}" data-age="${k}" id="age-${k}">
+      ${baby(+k)}<b>${f.label}</b><span>${f.sub}</span>${+k===suggest?'<em>مناسب لطفلك</em>':''}</button>`;
+  }).join('');
+  $('ages').querySelectorAll('.age').forEach(b=>b.onclick=()=>start(+b.dataset.age));
+}
+
+function start(age){ S={age, i:0, ans:[], extra:{}}; renderQ(); show('quiz'); }
+
+function renderQ(){
+  const f = FORMS[S.age], total = steps(), n = f.qs.length;
+  $('qAvatar').innerHTML = baby(S.age);
+  $('qAge').textContent = 'اختبار ' + f.label;
+  $('qTitle').textContent = S.i < n ? f.title : 'أسئلة أخيرة مهمة';
+  $('qBar').style.width = (S.i/total*100)+'%';
+  $('qCount').textContent = `سؤال ${AR(S.i+1)} من ${AR(total)}`;
+  const isExtra = S.i >= n;
+  const q = isExtra ? EXTRA[S.i-n] : f.qs[S.i];
+  const tint = TINT[q.ic] || '--t1';
+  const tag = isExtra ? 'سؤال لكل الأعمار' : (q.key ? 'مهارة أساسية' : ({ear:'السمع',smile:'التواصل الاجتماعي',sound:'الأصوات والكلام',name:'الاستجابة للاسم',gesture:'الإشارات',point:'الإشارة بالصباع',words:'الكلمات',understand:'الفهم',play:'اللعب',book:'الكتب والصور',eyes:'النظر والانتباه'})[q.ic]);
+  let body;
+  if(q.type==='multi'){
+    const cur = S.extra.risk || [];
+    body = `<div class="checks">${q.items.map(([v,l])=>`<label class="chk"><input type="checkbox" value="${v}" id="risk-${v}" ${cur.includes(v)?'checked':''}>${l}</label>`).join('')}
+      <label class="chk"><input type="checkbox" value="none" id="risk-none" ${cur.includes('none')?'checked':''}>ولا حاجة من دول</label></div>
+      <button class="primary" type="button" id="riskNext" ${cur.length?'':'disabled'}>شوف النتيجة</button>`;
+  } else {
+    const opts = q.opts || [{v:'yes',l:'أيوه، بيعملها'},{v:'no',l:'لأ، لسه'},{v:'unsure',l:'مش متأكد/ة'}];
+    const prev = isExtra ? S.extra[q.id] : S.ans[S.i];
+    body = `<div class="answers">${opts.map((o,j)=>{
+      const cls = o.v==='yes' ? (isExtra?'n':'y') : o.v==='no' ? (isExtra?'y':'n') : 'u';
+      const mark = cls==='y'?'✓':cls==='n'?'✕':'؟';
+      const sel = prev && (isExtra ? prev===o.v : (prev.v===o.v && (prev.f||'')===(o.f||''))) ? ' sel':'';
+      return `<button type="button" class="ans ${cls}${sel}" data-j="${j}" id="ans-${j}"><span class="dot">${mark}</span>${o.l}</button>`;}).join('')}</div>`;
+  }
+  const card = $('qCard');
+  card.classList.remove('fade'); void card.offsetWidth; card.classList.add('fade');
+  card.innerHTML = `<div class="qart"><span class="qtag">${tag}</span><div class="blob" style="background:var(${tint})">${icon(q.ic)}</div></div>
+    <div class="qbody"><h3>${q.t}</h3>
+      <div class="how">${icon('bulb')}<div><b>إزاي تتأكد؟</b> ${q.how}</div></div>
+      ${body}</div>`;
+  if(q.type==='multi'){
+    const boxes=[...card.querySelectorAll('input')];
+    boxes.forEach(b=>b.onchange=()=>{
+      if(b.value==='none'&&b.checked) boxes.forEach(x=>{if(x!==b)x.checked=false});
+      if(b.value!=='none'&&b.checked) $('risk-none').checked=false;
+      S.extra.risk = boxes.filter(x=>x.checked).map(x=>x.value);
+      $('riskNext').disabled = !S.extra.risk.length;
+    });
+    $('riskNext').onclick=()=>renderResult();
+  } else {
+    const opts = q.opts || [{v:'yes'},{v:'no'},{v:'unsure'}];
+    card.querySelectorAll('.ans').forEach(b=>b.onclick=()=>{
+      const o = opts[+b.dataset.j];
+      if(isExtra) S.extra[q.id]=o.v; else S.ans[S.i]={v:o.v,f:o.f};
+      S.i++; renderQ();
+    });
+  }
+}
+$('qBack').onclick = ()=>{ if(S.i===0){ show('home'); } else { S.i--; renderQ(); } };
+
+const TIER = {
+  ok:{ic:'✓',pill:'مطمئن',h:'الإجابات مطمئنة للسن ده',p:'طفلك بيعمل مهارات السمع والتواصل المتوقعة في السن ده. كمّلوا كلام ولعب وقراية معاه كل يوم.'},
+  watch:{ic:'؟',pill:'راقب وجرّب تاني',h:'خلّينا نراقب ونجرّب تاني',p:'في مهارة أو أكتر مش واضحة. ده مش معناه إن في مشكلة، بس محتاجين نتأكد.'},
+  refer:{ic:'!',pill:'محتاج تقييم',h:'الأفضل نعمل تقييم قريب',p:'الإجابات بتقول إن في مهارات مهمة لسه ما ظهرتش. ده مش تشخيص، لكن التقييم بدري بيفرق جدًا لو في أي مشكلة.'},
+  urgent:{ic:'!!',pill:'مهم دلوقتي',h:'كلّموا الدكتور في أقرب وقت',p:'إن الطفل يبطّل مهارة كان بيعملها علامة لازم تتشاف بسرعة، في خلال أيام، مش أسابيع، في أي سن.'}
+};
+
+function renderResult(){
+  const f = FORMS[S.age];
+  const R = evaluate(S.age, S.ans, S.extra);
+  const T = TIER[R.tier];
+  let steps;
+  if(R.tier==='ok') steps = ['اتكلموا مع الطفل كتير وسمّوا الحاجات اللي حواليه.','اقرّوا له كل يوم، ولو لدقايق.','بلاش موبايل أو تلفزيون قبل سنتين، إلا مكالمات الفيديو مع العيلة.',`اعملوا الاختبار الجاي ${nextLabel()}، وكمّلوا زيارات المتابعة.`];
+  if(R.tier==='watch') steps = ['جرّبوا المهارات اللي تحت دي خلال أسبوعين، في أوقات وأماكن مختلفة وهو هادي.','استخدموا نصايح اللعب اللي تحت كل مهارة.','اعملوا الاختبار تاني بعد أسبوعين. لو لسه في «لأ» أو «مش متأكد»، أو لسه عندكم قلق، كلّموا البرنامج.'];
+  if(R.tier==='refer') steps = [`كلّموا برنامج متابعة وليدك على ${PHONE} واحجزوا ميعاد قريب.`,'غالبًا الدكتور هيطلب فحص سمع، وتقييم للنمو والتخاطب.', S.age>=18?'في السن ده الدكتور ممكن يعمل كمان استبيان التواصل الاجتماعي (M‑CHAT)، ودا روتيني عند ١٨ و٢٤ شهر.':'اكتبوا أمثلة للمهارات اللي مش ظاهرة، وإمتى لاحظتوها.','ابدأوا من دلوقتي نصايح اللعب اللي تحت؛ مش محتاجين تستنوا الميعاد.'];
+  if(R.tier==='urgent') steps = [`كلّموا البرنامج على ${PHONE} أو دكتور الأطفال في خلال أيام.`,'اكتبوا إيه المهارة اللي اختفت، وإمتى، ولو في حاجة حصلت قبلها (سخونية، دور برد، تغيير في البيت).','لو في تشنجات أو صعوبة في التنفس أو ازرقاق، روحوا الطوارئ فورًا.'];
+
+  const hearingTxt = {
+    none:['احجزوا فحص سمع دلوقتي','فحص السمع المفروض يتعمل قبل ما الطفل يكمّل شهر، والتشخيص قبل ٣ شهور، والعلاج (لو محتاج) قبل ٦ شهور. متستنوش لحد ما يبان تأخر في الكلام.'],
+    refer:['محتاجين نعيد فحص السمع بسرعة','النتيجة اللي محتاجة إعادة لازم تتعاد في أقرب وقت، حتى لو الطفل بيبان إنه بيسمع. كتير من الأطفال اللي عندهم ضعف سمع بيتخضوا من الأصوات العالية.'],
+    unsure:['اتأكدوا من نتيجة فحص السمع','دوّروا على ورقة المستشفى أو كارت المتابعة. لو مش لاقيين النتيجة، الأسهل نعيد الفحص.'],
+    risk:['طفلكم محتاج متابعة سمع منتظمة','بسبب اللي اخترتوه في آخر سؤال، الطفل محتاج فحص سمع كامل عند أخصائي سمعيات (المفروض مرة على الأقل قبل ما يكمّل ٩ شهور، ولو ما اتعملش احجزوه دلوقتي)، ومتابعة سمع بعدها، حتى لو فحص الولادة كان سليم.']
+  }[R.hearing];
+
+  const list = [...R.noItems.map(x=>({...x,k:'n'})), ...R.unsureItems.map(x=>({...x,k:'u'}))].filter(x=>x.q.id!=='screen');
+  const skills = list.length ? `<div class="block"><h3>المهارات اللي محتاجة اهتمام</h3>${list.map(x=>`
+    <div class="skill"><div class="si" style="background:var(${TINT[x.q.ic]})">${icon(x.q.ic)}</div>
+    <div><b>${x.q.t.replace(/؟$/,'')}<small class="${x.k}">${x.k==='n'?'لأ':'مش متأكد'}</small></b><p>${TIPS[x.q.ic]}</p></div></div>`).join('')}</div>` : '';
+
+  $('result').innerHTML = `
+    <div class="res-hero t-${R.tier} fade">
+      <div class="ic" aria-hidden="true">${T.ic}</div>
+      <div><span class="pill">اختبار ${f.label} · ${T.pill}</span><h2>${T.h}</h2><p>${T.p}</p></div>
+    </div>
+    ${hearingTxt?`<div class="block hear"><h3>${hearingTxt[0]}</h3><p>${hearingTxt[1]}</p></div>`:''}
+    <div class="block"><h3>${R.tier==='ok'?'كمّلوا بالطريقة دي':'الخطوة الجاية'}</h3><ul>${steps.map(s=>`<li>${s}</li>`).join('')}</ul></div>
+    ${skills}
+    <div class="block"><h3>ورّوا النتيجة للدكتور</h3>
+      <p class="small">انسخوا الملخص ده وابعتوه على واتساب البرنامج، أو ورّوه للدكتور في الزيارة.</p>
+      <textarea class="copybox" id="summary" readonly>${summaryText(R)}</textarea>
+      <div class="actions" style="margin-top:8px"><button class="ghost" type="button" id="copySum">انسخ الملخص</button><span class="toast" id="copied" aria-live="polite"></span></div>
+    </div>
+    <div class="actions">
+      <button class="primary" type="button" id="again">اعمل اختبار تاني</button>
+      <button class="ghost" type="button" id="review">راجع إجاباتي</button>
+    </div>
+    <div class="flags" style="margin-top:16px"><div class="ic">!</div><div><b>روحوا الطوارئ فورًا</b> لو الطفل عنده تشنجات، أو ازرقاق، أو صعوبة في التنفس.</div></div>`;
+  $('again').onclick = ()=>{ show('home'); };
+  $('review').onclick = ()=>{ S.i=0; renderQ(); show('quiz'); };
+  $('copySum').onclick = ()=>copy($('summary').value, $('copied'), $('summary'));
+  $('qBar').style.width='100%';
+  show('result');
+}
+
+function nextLabel(){
+  const ks = Object.keys(FORMS).map(Number); const nx = ks.find(k=>k>S.age);
+  return nx ? 'لما يكمّل ' + FORMS[nx].label : 'لو في أي قلق بعد سنتين';
+}
+
+function summaryText(R){
+  const f = FORMS[S.age], d = new Date().toLocaleDateString('ar-EG');
+  const lines = [`برنامج متابعة وليدك: اختبار السمع والتواصل (${f.label})`, `التاريخ: ${d}`, `النتيجة: ${TIER[R.tier].pill}`];
+  if(S.age===2 && S.ans[0]) lines.push('فحص السمع بعد الولادة: ' + FORMS[2].qs[0].opts.find(o=>o.v===S.ans[0].v && (o.f||'')===(S.ans[0].f||'')).l);
+  const no = R.noItems.filter(x=>x.q.id!=='screen'), un = R.unsureItems.filter(x=>x.q.id!=='screen');
+  if(no.length) lines.push('مهارات «لأ»: ' + no.map(x=>x.q.t.replace(/؟$/,'')).join(' | '));
+  if(un.length) lines.push('مهارات «مش متأكد»: ' + un.map(x=>x.q.t.replace(/؟$/,'')).join(' | '));
+  lines.push('فقد مهارة سابقة: ' + ({yes:'أيوه',no:'لأ',unsure:'مش متأكد'}[R.regress]||'-'));
+  lines.push('قلق الأهل: ' + ({yes:'أيوه',no:'لأ',unsure:'شوية'}[R.worry]||'-'));
+  const RL = Object.fromEntries(EXTRA[2].items);
+  lines.push('عوامل خطورة للسمع: ' + (R.risks.length ? R.risks.map(r=>RL[r]).join('، ') : 'لا يوجد'));
+  return lines.join('\n');
+}
+
+function copy(text, out, fallbackEl){
+  const done = ()=>{ if(out){ out.textContent='اتنسخ ✓'; setTimeout(()=>out.textContent='',2500);} };
+  try{
+    navigator.clipboard.writeText(text).then(done).catch(()=>{ if(fallbackEl){fallbackEl.select();} if(out) out.textContent='اضغط مطوّل على النص وانسخه'; });
+  }catch(e){ if(fallbackEl) fallbackEl.select(); }
+}
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{ const t=b.textContent; copy(b.dataset.copy); b.textContent='اتنسخ ✓'; setTimeout(()=>b.textContent=t,2000); });
+
+/* ---------- corrected-age helper ---------- */
+const ga = $('ga');
+ga.innerHTML = '<option value="40">في ميعاده (٣٧ أسبوع أو أكتر)</option>' + Array.from({length:14},(_,i)=>36-i).map(w=>`<option value="${w}">الأسبوع ${AR(w)}</option>`).join('');
+function monthsBetween(a,b){
+  let m=(b.getFullYear()-a.getFullYear())*12+(b.getMonth()-a.getMonth());
+  if(b.getDate()<a.getDate()) m--;
+  const anchor=new Date(a); anchor.setMonth(anchor.getMonth()+m);
+  const days=Math.round((b-anchor)/86400000);
+  return {m, w:Math.floor(days/7), frac: m + days/30.4375};
+}
+function ageText(p){
+  const {m,w}=p;
+  const mt = m<=0?'':m===1?'شهر':m===2?'شهرين':m<=10?`${AR(m)} شهور`:`${AR(m)} شهر`;
+  const wt = w===0?'':w===1?'أسبوع':w===2?'أسبوعين':`${AR(w)} أسابيع`;
+  return [mt,wt].filter(Boolean).join(' و') || 'أقل من أسبوع';
+}
+// الاختبار المناسب = آخر سن الطفل وصله (مع سماح أسبوعين)، لأن كل نموذج بيقيس مهارات «بنهاية» السن ده
+function pickForm(months){
+  const ks = Object.keys(FORMS).map(Number);
+  let best = ks[0];
+  ks.forEach(k=>{ if(k <= months + 0.5) best=k; });
+  return best;
+}
+function calc(){
+  const v = $('dob').value; const out = $('calcOut');
+  if(!v){ out.innerHTML = 'اكتب تاريخ الميلاد وهنقولك عمره المُصحّح وأنسب اختبار ليه.'; renderAges(null); return; }
+  const dob = new Date(v+'T00:00:00'), now = new Date(); now.setHours(0,0,0,0);
+  if(dob > now){ out.textContent = 'التاريخ ده لسه ما جاش. راجع تاريخ الميلاد.'; renderAges(null); return; }
+  const real = monthsBetween(dob, now);
+  const w = +ga.value, early = w<37 ? (40-w)*7 : 0;
+  const useCorr = early && real.frac < 24;
+  const cdob = new Date(dob); cdob.setDate(cdob.getDate()+early);
+  const corr = cdob <= now ? monthsBetween(cdob, now) : null;
+  let html = `عمره: <strong>${ageText(real)}</strong>`;
+  if(useCorr) html += ` · العمر المُصحّح: <strong>${corr?ageText(corr):'لسه ما وصلش لميعاد ولادته'}</strong>`;
+  const useM = useCorr ? (corr?corr.frac:0) : real.frac;
+  let s = null;
+  if(useM > 30){ html += '<br>طفلك أكبر من سنتين ونص. الاختبار ده لحد سنتين؛ لو عندكم أي قلق على كلامه كلّموا البرنامج.'; }
+  else if(useM < 1.5){ s = 2; html += '<br>لسه بدري على أسئلة التواصل. ابدأوا باختبار <strong>شهرين</strong> عشان تتأكدوا من فحص السمع.'; }
+  else { s = pickForm(useM); html += `<br>أنسب اختبار: <strong>${FORMS[s].label}</strong> (معلّم تحت).`; }
+  out.innerHTML = html; renderAges(s);
+}
+$('dob').max = new Date().toISOString().slice(0,10);
+$('dob').oninput = calc; ga.onchange = calc;
+$('whatCorrected').onclick = ()=>{ const n=$('correctedNote'); n.hidden=!n.hidden; };
+$('heroArt').innerHTML = baby(12);
+calc();
+window.__pickForm = pickForm;
+})();
+</script>
+</body></html>
